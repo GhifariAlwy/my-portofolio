@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-ink-950: #0a0c10;
+  --color-ink-900: #10131a;
+  --color-ink-800: #161a22;
+  --color-ink-700: #1f242e;
+  --color-ink-600: #2c323f;
+  --color-ink-400: #5b6472;
+  --color-ink-200: #b7bec8;
+  --color-ink-100: #e7e9ec;
+  --color-ink-50: #f7f7f5;
+
+  --color-accent-400: #7ff0dc;
+  --color-accent-500: #5eead4;
+  --color-accent-600: #2dd4bf;
+
+  --color-indigo-400: #818cf8;
+  --color-indigo-500: #6366f1;
+}
+
+@layer base {
+  * {
+    @apply border-ink-700/50;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ink-50 text-ink-950 dark:bg-ink-950 dark:text-ink-100;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+  }
+
+  ::selection {
+    background-color: var(--color-accent-500);
+    color: var(--color-ink-950);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent-500);
+    outline-offset: 3px;
+  }
+}
+
+@layer utilities {
+  .eyebrow {
+    font-family: var(--font-mono);
+    letter-spacing: 0.02em;
+  }
+
+  .grain {
+    background-image: radial-gradient(currentColor 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: -18;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
