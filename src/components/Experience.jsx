@@ -39,6 +39,27 @@ export default function Experience() {
                 <p className="text-ink-950/60 dark:text-ink-100/60 mb-4">
                   {job.company}
                 </p>
+                <div className="grid max-w-2xl grid-cols-2 gap-3 mb-5">
+                  {job.proofs.map((proof) => (
+                    <a
+                      key={proof.href}
+                      href={proof.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`Open ${proof.name} GitHub repository`}
+                      className="relative block aspect-[16/9] overflow-hidden rounded-xl border border-ink-600/15 dark:border-ink-600/40"
+                    >
+                      <img
+                        src={proof.src}
+                        alt={proof.alt}
+                        className="h-full w-full object-cover grayscale-[20%] transition duration-300 hover:grayscale-0"
+                      />
+                      <span className="absolute bottom-2 left-2 rounded bg-ink-950/75 px-2 py-1 eyebrow text-[9px] uppercase text-ink-50">
+                        {proof.name}
+                      </span>
+                    </a>
+                  ))}
+                </div>
                 <ul className="space-y-2.5">
                   {job.bullets.map((bullet, idx) => (
                     <li
