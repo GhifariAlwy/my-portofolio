@@ -19,8 +19,11 @@ export const skillGroups = [
   {
     category: "System Analysis",
     items: [
+      "System Architecture",
       "Requirement Analysis",
       "Requirements Analysis",
+      "Software System Analysis",
+      "Data Analysis",
       "UML Design",
       "OOAD",
       "FOOM",
@@ -34,7 +37,7 @@ export const skillGroups = [
   },
   {
     category: "Business",
-    items: ["Business Development"],
+    items: ["Business Development", "Teamwork", "Project Management"],
   },
   {
     category: "Tools & DevOps",
@@ -43,9 +46,9 @@ export const skillGroups = [
       "CI/CD",
       "Docker",
       "Kubernetes",
+      "AI System Development",
       "AI-Assisted",
       "Odoo ERP",
-      "Project Management",
     ],
   },
 ];

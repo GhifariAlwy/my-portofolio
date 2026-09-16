@@ -1,6 +1,7 @@
 import { projects } from "../data/projects";
 import SectionHeading from "./SectionHeading";
 import Reveal from "./Reveal";
+import { GithubIcon } from "./BrandIcons";
 
 export default function Projects() {
   return (
@@ -63,6 +64,22 @@ export default function Projects() {
                 <p className="mt-3 text-sm leading-relaxed text-ink-950/70 dark:text-ink-100/70">
                   {project.description}
                 </p>
+                {project.links?.length > 0 && (
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {project.links.map((link) => (
+                      <a
+                        key={link.href}
+                        href={link.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center gap-1.5 rounded-lg border border-ink-600/20 dark:border-ink-600/50 px-2.5 py-1 eyebrow text-[10px] uppercase text-ink-950/60 dark:text-ink-100/60 hover:border-accent-500/60 hover:text-accent-600 dark:hover:text-accent-400 transition-colors"
+                      >
+                        <GithubIcon size={11} />
+                        {link.name}
+                      </a>
+                    ))}
+                  </div>
+                )}
               </article>
             </Reveal>
           ))}

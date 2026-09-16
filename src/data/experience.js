@@ -24,6 +24,20 @@ export const experience = [
     ],
   },
   {
+    role: "System Analyst",
+    company: "Yunas Studio",
+    period: "Sep 2025 — Jul 2026",
+    current: false,
+    proofs: [],
+    bullets: [
+      "Led requirements engineering for a photo studio booking platform: 40 functional and 14 non-functional requirements across three roles (Customer, Admin, Superadmin).",
+      "Produced FOOM documentation (DFD and ERD with 10 entities) and full OOAD artifacts — 23 use cases, 23 activity diagrams, 23 sequence diagrams, and a class diagram with 9 core classes.",
+      "Designed a layered PWA architecture with payment gateway integration (Midtrans/Xendit).",
+      "Authored the SRS and SDD with a requirements traceability matrix covering 54 requirements (100% coverage).",
+      "Validated deliverables with stakeholders, achieving 100% approval across review sessions.",
+    ],
+  },
+  {
     role: "Internship, IT Support Specialist — Project & Service Delivery 2 Division",
     company: "PT Infrastruktur Telekomunikasi Indonesia",
     period: "Jul 2025 — Sep 2025",
