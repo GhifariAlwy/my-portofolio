@@ -8,7 +8,12 @@ export const education = {
 export const certifications = [
   {
     name: "Hak Kekayaan Intelektual (HKI)",
-    detail: "Sistem Booking pada Foto Studio berbasis PWA",
+    detail: "Sistem Booking pada Foto Studio berbasis PWA (Progressive Web App)",
+    year: "2026",
+  },
+  {
+    name: "IBM Backend with Node.js and Express Developer",
+    detail: "Coursera",
     year: "2026",
   },
   {
@@ -26,11 +31,11 @@ export const certifications = [
 export const organizations = [
   {
     role: "Chairman",
-    org: "PERMALA (Perhimpunan Mahasiswa Lampung), Telkom University",
+    org: "PERMALA (Perhimpunan Mahasiswa Lampung) Telkom University",
     period: "2024 — 2025",
   },
   {
-    role: "Staff, External Division",
+    role: "Staff of External Division",
     org: "HMRPL (Himpunan Mahasiswa RPL)",
     period: "2023 — 2024",
   },

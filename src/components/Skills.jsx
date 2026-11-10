@@ -7,7 +7,11 @@ export default function Skills() {
     <section id="skills" className="py-24 sm:py-28 bg-ink-100/40 dark:bg-ink-900/40">
       <div className="max-w-6xl mx-auto px-6">
         <Reveal>
-          <SectionHeading index="04" title="Skills" />
+          <SectionHeading
+            index="04"
+            title="Skills"
+            note="Core competencies across quality assurance, technical documentation, system analysis, and full-stack engineering."
+          />
         </Reveal>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
